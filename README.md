@@ -1,6 +1,6 @@
-# AI Coach
+# Sensei AI
 
-A Claude Code-powered personal coaching tool. Clone, configure, reflect.
+Your AI coach that reads your actual work and asks the hard questions.
 
 Gathers data about your week (git commits, TODO files, priorities), then coaches you through a structured review using your chosen coaching persona.
 
@@ -9,8 +9,8 @@ Gathers data about your week (git commits, TODO files, priorities), then coaches
 ## Try It Now (5 minutes)
 
 ```bash
-git clone <this-repo>
-cd ai-coach
+git clone https://github.com/jorjani/sensei-ai.git
+cd sensei-ai
 
 # Generate sample workspace with demo data
 ./scripts/demo-setup.sh
