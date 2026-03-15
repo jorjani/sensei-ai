@@ -1,0 +1,43 @@
+# AI Coach Configuration
+# Copy to config.yaml and customize
+
+# Which coaching persona to use (run /add-coach to create your own)
+coach: mochary              # mochary | grove | run /add-coach to add any persona
+
+# Data sources -- where to gather information about your week
+sources:
+  git-log:
+    enabled: true
+    paths:                   # Directories containing git repos
+      - ~/Projects
+    depth: 1                 # How deep to search for .git dirs (1 = direct children)
+    days: 7                  # How far back to look
+
+  markdown-todos:
+    enabled: true
+    files:                   # Specific TODO/goals files to read
+      - ~/TODO.md
+    glob: "*/TODO.md"        # Also scan for project TODOs (relative to paths above)
+
+  priorities:
+    enabled: false           # Set to true after creating your priorities file
+    file: ~/priorities.md    # Long-term priorities (quarterly/yearly)
+
+  # calendar:
+  #   enabled: false
+  #   days: 7
+  #   # ics_file: ~/calendar-export.ics   # Optional: manual .ics export
+
+  # github:                  # Requires gh CLI (https://cli.github.com)
+  #   enabled: false
+  #   repos: []              # Specific repos (owner/repo), or empty for all
+  #   days: 7
+
+  # journal:                 # Daily markdown journal files
+  #   enabled: false
+  #   path: ~/journal
+  #   pattern: "YYYY-MM-DD"
+
+# Output preferences
+output:
+  save_to_file: true         # Save review to results/ directory

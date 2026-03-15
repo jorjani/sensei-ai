@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.ai-coach.weekly-review</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <!-- UPDATE THIS PATH to where you cloned the repo -->
+        <string>/Users/YOUR_USERNAME/ai-coach/scripts/run-review.sh</string>
+        <string>--notify</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <!-- Saturday = 6, Sunday = 0 -->
+        <key>Weekday</key>
+        <integer>6</integer>
+        <key>Hour</key>
+        <integer>8</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <!-- UPDATE THIS PATH -->
+    <string>/Users/YOUR_USERNAME/ai-coach/results/launchd.log</string>
+
+    <key>StandardErrorPath</key>
+    <!-- UPDATE THIS PATH -->
+    <string>/Users/YOUR_USERNAME/ai-coach/results/launchd-error.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
+    </dict>
+</dict>
+</plist>

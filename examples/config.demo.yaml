@@ -1,0 +1,25 @@
+# Demo configuration -- points at the generated demo workspace
+# To use: cp examples/config.demo.yaml config.yaml
+
+coach: mochary
+
+sources:
+  git-log:
+    enabled: true
+    paths:
+      - ./examples/demo-workspace
+    depth: 1
+    days: 7
+
+  markdown-todos:
+    enabled: true
+    files:
+      - ./examples/demo-workspace/TODO.md
+    glob: "*/TODO.md"
+
+  priorities:
+    enabled: true
+    file: ./examples/demo-workspace/priorities.md
+
+output:
+  save_to_file: true
